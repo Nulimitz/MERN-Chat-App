@@ -1,0 +1,12 @@
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+
+.fullscreen {
+  height: 100vh;
+  display: flex;
+  background: url("./assets/images/background.png");
+  background-position: center;
+  background-size: cover;
+}
