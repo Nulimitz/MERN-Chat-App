@@ -18,10 +18,11 @@ const SignupForm = () => {
       <Form.Group className="mb-3" controlId="name">
         <Form.Label>Name</Form.Label>
         <Form.Control
-          type="email"
+          type="text"
           placeholder="Enter your name"
           required
           onChange={(e) => setName(e.target.value)}
+          value={name}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="email">
@@ -31,6 +32,7 @@ const SignupForm = () => {
           placeholder="Enter your email address"
           required
           onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="password">
@@ -42,6 +44,7 @@ const SignupForm = () => {
               placeholder="Enter password"
               required
               onChange={(e) => setPassword(e.target.value)}
+              value={password}
             />
           </Col>
           <Col md={1} className="d-flex align-items-center">
@@ -58,11 +61,17 @@ const SignupForm = () => {
           placeholder="Confirm password"
           required
           onChange={(e) => setConfirmPassword(e.target.value)}
+          value={confirmpassword}
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="pic">
         <Form.Label>Profile Pic</Form.Label>
-        <Form.Control type="file" />
+        <Form.Control
+          type="file"
+          accept="image/*"
+          onChange={(e) => setPic(e.target.files[0])}
+          value={pic}
+        />
       </Form.Group>
       <Button variant="primary" className="btn-block w-100" type="submit">
         Sign up

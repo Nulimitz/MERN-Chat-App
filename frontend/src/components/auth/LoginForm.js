@@ -19,6 +19,8 @@ const LoginForm = () => {
             type="email"
             placeholder="Enter your email address"
             required
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </Form.Group>
         <Form.Group className="mb-3" controlId="password">
@@ -30,6 +32,7 @@ const LoginForm = () => {
                 placeholder="Enter password"
                 required
                 onChange={(e) => setPassword(e.target.value)}
+                value={password}
               />
             </Col>
             <Col md={1} className="d-flex align-items-center">
